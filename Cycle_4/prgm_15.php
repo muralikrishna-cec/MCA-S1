@@ -4,25 +4,29 @@
     </head>
   <body>
     <h2 align="center">FACTORIAL</h2>
-     <form method="post" action="">
-        Enter a number :<input type="text" name="number">
+     <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+        Enter a number :<input type="text" name="number" required>
                      <input type="submit" name="submit">
     </form>
   </body>
 </html>
 
 <?php
-    if($_POST['submit'])
+    if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"]))
     {
       $number=$_POST['number'];
-      $n=$number;
-      $f=1;
-
-     for($i=1; $i<=$n;$i++) 
-     {
-        $f=$f*$i;
-     }
-
-   echo "factorial of $n is $f";
+      if(is_numeric($number))
+       {
+         $num=$number;
+         $fact=1;
+  
+         for($i=1; $i<=$num;$i++) 
+          {
+           $fact*=$i;
+          }
+          echo "Factorial of $num is $fact";
+       }else{
+        echo "Enter A Valid Number";
+       }
 }
 ?>
