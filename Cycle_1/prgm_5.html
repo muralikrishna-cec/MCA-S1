@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <title>FORM</title>
+ </head>
+
+ <body>
+    <h3 align="center"><b>STUDENT REGISTRATION FORM</b></h3>
+    <center>
+        <form>
+            <table style="border: 1px solid #000;border-collapse: separate; border-spacing:1; width: 60%;">
+                <tr>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: left;"> <label>FIRST NAME</label> </th>
+                    <td style="border: 1px solid #000; padding: 8px; text-align: left;"> 
+                        <input type="text"id="first_name" maxlength="30" required>(max 30 characters)
+                    </td>
+                </tr>
+                <tr>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: left;"> <label>LAST NAME</label> </th>
+                    <td style="border: 1px solid #000; padding: 8px; text-align: left;"> 
+                        <input type="text"id="last_name" maxlength="30" required>(max 30 characters) 
+                    </td>
+                </tr>
+                <tr>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: left;"> <label>DATE OF BIRTH</label> </th>
+                    <td style="border: 1px solid #000; padding: 8px; text-align: left;">
+                        <input type="date" id="dob"required>
+                    </td>
+                </tr>
+                <tr>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: left;"> <label>EMAIL ID</label> </th>
+                    <td style="border: 1px solid #000; padding: 8px; text-align: left;">
+                        <input type="email" id="email" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: left;"> <label>MOBILE NUMBER</label> </th>
+                    <td style="border: 1px solid #000; padding: 8px; text-align: left;">
+                        <input type="tel" id="mobile_no" maxlength="30" required>(10 digit number)
+                    </td>
+                </tr>
+                <tr>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: left;"> <label>GENDER</label> </th>
+                    <td style="border: 1px solid #000; padding: 8px; text-align: left;">
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">Male</label>&nbsp &nbsp &nbsp &nbsp
+                        <input type="radio" id="female" name="gender" value="female" required>
+                        <label for="female">Female</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: left;"> <label>ADDRESS</label> </th>
+                    <td style="border: 1px solid #000; padding: 8px; text-align: left;">
+                        <textarea id="address" name="address" rows="4" cols="50" required></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: left;"> <label>CITY</label> </th>
+                    <td style="border: 1px solid #000; padding: 8px; text-align: left;">
+                        <input type="text" id="city" maxlength="30" required>(max 30 characters)
+                    </td>
+                </tr>
+                <tr>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: left;"> <label>PIN CODE</label> </th>
+                    <td style="border: 1px solid #000; padding: 8px; text-align: left;">
+                        <input type="text" id="pin" maxlength="6" required>(max 6 characters)
+                    </td>
+                </tr>
+                <tr>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: left;"> <label>STATE</label> </th>
+                    <td style="border: 1px solid #000; padding: 8px; text-align: left;">
+                        <input type="text" id="state" maxlength="30" required>(max 30 characters)
+                    </td>
+                </tr>
+                <tr>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: left;">  <label>COUNTRY</label> </th>
+                    <td style="border: 1px solid #000; padding: 8px; text-align: left;">
+                        <select id="country" name="country">
+                            <option value="India">India</option>
+                            <option value="USA">United States of America</option>
+                            <option value="UK">United Kingdom</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Germany">Germany</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: left;"> <label>HOBBIES</label> </th>
+                    <td style="border: 1px solid #000; padding: 8px; text-align: left;">
+                        <label>Drawing</label>
+                        <input type="checkbox" id="draw" name="draw">&nbsp &nbsp&nbsp &nbsp&nbsp&nbsp
+                        <label>Singing</label>
+                        <input type="checkbox" id="sing" name="sing">&nbsp &nbsp&nbsp &nbsp&nbsp&nbsp
+                        <label>Dancing</label>
+                        <input type="checkbox" id="dance" name="dance">&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp
+                        <label>Sketching</label>
+                        <input type="checkbox" id="sketch" name="sketch"><br><br>
+                        <label>Others</label>
+                        <input type="text" id="oth" name="oth">
+                    </td>
+                </tr>
+                <tr>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: left;"> <label>QUALIFICATION</label> </th>
+                    <td style="border: 1px solid #000; padding: 8px; text-align: left;">
+                        <table style="border-collapse: collapse; border: none;">
+                            <tr>
+                                <th> Sr No. &nbsp</th>
+                                <th> Examination &nbsp</th>
+                                <th> Board &nbsp</th>
+                                <th> Percentage &nbsp</th>
+                                <th> Year of Passing </th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Class X</td>
+                                <td><input type="text" id="brd1" maxlength="30"></td>
+                                <td><input type="text" id="brd2" maxlength="30"></td>
+                                <td><input type="text" id="brd3" maxlength="30"></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Class XII</td>
+                                <td><input type="text" id="brd1" maxlength="30"></td>
+                                <td><input type="text" id="brd2" maxlength="30"></td>
+                                <td><input type="text" id="brd3" maxlength="30"></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Graduation</td>
+                                <td><input type="text" id="brd1" maxlength="30"></td>
+                                <td><input type="text" id="brd2" maxlength="30"></td>
+                                <td><input type="text" id="brd3" maxlength="30"></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Masters</td>
+                                <td><input type="text" id="brd1" maxlength="30"></td>
+                                <td><input type="text" id="brd2" maxlength="30"></td>
+                                <td><input type="text" id="brd3" maxlength="30"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: left;"> <label>COURSES APPLIED FOR</label> </th>
+                    <td style="border: 1px solid #000; padding: 8px; text-align: left;">
+                        <label>MCA</label>
+                        <input type="radio" id="mca" name="mca"> &nbsp &nbsp &nbsp &nbsp
+                        <label>M.Tech</label>
+                        <input type="radio" id="mt" name="mt"> &nbsp &nbsp &nbsp &nbsp
+                        <label>M.Sc</label>
+                        <input type="radio" id="msc" name="msc"> &nbsp &nbsp &nbsp &nbsp
+                        <label>Ph.D</label>
+                        <input type="radio" id="phd" name="phd">
+                    </td>    
+                </tr>
+                <tr>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: left;"> <label>ENTER THE PASSWORD</label> </th>
+                    <td style="border: 1px solid #000; padding: 8px; text-align: left;">
+                        <input type="password" id="password" name="password">(max 30 characters)
+                    </td>
+                </tr>
+                <tr>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: left;"> <label>UPLOAD YOUR PHOTO</label> </th>
+                    <td style="border: 1px solid #000; padding: 8px; text-align: left;">
+                        <input type="file" id="photo" name="photo" accept="image/*">
+                    </td>
+                </tr>
+                <tr>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: left;"> <label>DATE OF TC</label> </th>
+                    <td style="border: 1px solid #000; padding: 8px; text-align: left;">
+                        <input type="date" id="dotc">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="border: 1px solid #000; padding: 8px; text-align: center;">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </center>
+ </body>
+
+ </html>
