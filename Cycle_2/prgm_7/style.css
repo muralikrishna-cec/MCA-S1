@@ -1,0 +1,20 @@
+*{
+    background-color: lightgreen;
+}
+
+p{
+  text-align: center;
+  color: green;
+ }
+
+ #para1 {
+  text-align: center; color: red;
+}
+
+.center { 
+    color: brown;
+ }
+   
+ p:hover { 
+    color: hotpink;
+    }
