@@ -21,9 +21,14 @@
             $adrs = $_REQUEST["adrs"];
             $gen = $_REQUEST["gender"];
             $dob = $_REQUEST["dob"];
+             
+            if (empty($name) || empty($mail) || empty($adrs) || empty($gen) || empty($dob)) {
+                echo "<p><h2>Please fill in all the fields.</p></h2>";
+                exit;
+            }
 
-            echo"<br><br>DETAILS:- <br><br>";
-            echo "Name: $name <br> Email ID: $mail <br>Address: $adrs <br> Gender: $gen <br> D.O.B: $dob";
+            echo"<br><br> <h1>DETAILS:- </h1>";
+            echo " <h3> Name:  $name <br> Email ID:  $mail <br>Address:  $adrs <br> Gender:  $gen <br> D.O.B:  $dob </h3>";
         } else {
             echo "<p>Please enter values..</p>";
         }
