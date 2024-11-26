@@ -1,0 +1,53 @@
+<html>
+<head>
+    <title>FormValidation</title>
+    <script>
+        function validate() {
+            var name = document.forms["frm"]["name"].value;
+            var mobile = document.forms["frm"]["mobile"].value;
+            var email = document.forms["frm"]["mail"].value;
+            var numformat = /^\d{10}$/;
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+            if (name == null || name == "") {
+                alert("Name cannot be empty");
+                return false;
+            }
+            if (isNaN(mobile)) {
+                alert(" Number should be numeric");
+                return false;
+            }
+            if (mobile == "") {
+                alert("Mobile no. cannot be empty");
+                return false;
+            }
+            else if (!(mobile.match(numformat))) {
+                alert("Mobile no.should contain 10 digits");
+                return false;
+            }
+            if (email == "") {
+                alert("Email cant be empty");
+                return false;
+            }
+            else if (!(email.match(mailformat))) {
+                alert("Invalid email format")
+                return false;
+            }
+            else
+                alert("Successfully submitted");
+        }
+    </script>
+</head>
+<body align="center">
+    <b> Form Validation </b> <br><br>
+    <form name="frm" onsubmit="return validate()">
+        Name: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <input type="text" name="name"><br><br>
+        Mobile No: &nbsp; &nbsp; &nbsp;
+        <input type="text" name="mobile"> <br><br>
+        Email: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <input type="text" name="mail"><br>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
