@@ -2,8 +2,8 @@
     <head>
         <title>ODD OR EVEN</title>
     </head>
-  <body>
-    <h2 align="center">ODD OR EVEN CHECKER</h2>
+  <body align="center">
+    <h2 >ODD OR EVEN CHECKER</h2>
      <form method="GET" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         Enter a number :<input type="text" name="number" required>
                      <input type="submit" name="submit">

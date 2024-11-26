@@ -2,8 +2,8 @@
     <head>
         <title>FACTORIAL</title>
     </head>
-  <body>
-    <h2 align="center">FACTORIAL</h2>
+  <body align="center">
+    <h2 >FACTORIAL</h2>
      <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         Enter a number :<input type="text" name="number" required>
                      <input type="submit" name="submit">
