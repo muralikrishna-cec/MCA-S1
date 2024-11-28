@@ -30,7 +30,7 @@
             echo"<br><br> <h1>DETAILS:- </h1>";
             echo " <h3> Name:  $name <br> Email ID:  $mail <br>Address:  $adrs <br> Gender:  $gen <br> D.O.B:  $dob </h3>";
         } else {
-            echo "<p>Please enter values..</p>";
+            echo "<p><h1>Please enter values..</p></h1>";
         }
     ?>
 </body>
