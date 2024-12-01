@@ -25,13 +25,12 @@ void enqueue()
   if(front==-1 && rear==-1)
   {
     front=rear=0;
-    queue[rear]=x; 
   }
   else
   {
     rear= (rear+1) % MAX;
-    queue[rear]=x;
   }
+   queue[rear]=x; 
    printf("\n ELEMENT %d  INSERTED SUCESSFULLY \n ",queue[rear]);
 }
 
@@ -46,7 +45,7 @@ void dequeue()
     }
 
     // Display the element being removed
-    printf("\n %d is DELETED ",queue[front]);
+    printf("\n %d is DELETED \n",queue[front]);
 
     // If the queue has only one element, reset front and rear
     if(front==rear)
@@ -97,20 +96,24 @@ int main()
         printf("\n1. ENQUEUE\n2. DEQUEUE\n3. DISPLAY\n4. EXIT\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
-                switch (choice) {
-            case 1:
-                enqueue();
-                break;
-            case 2:
-                dequeue();
-                break;
-            case 3:
-                display();
-                break;
-            case 4:printf("\n Exiting.... \n");
-                return 0;
-            default:
-                printf("\nINVALID CHOICE\n");
+        
+        switch (choice) 
+        {
+
+                 case 1: enqueue();
+                         break;
+
+                 case 2: dequeue();
+                         break;
+
+                 case 3: display();
+                         break;
+                         
+                 case 4: printf("\n Exiting.... \n");
+                         return 0;
+
+                 default: printf("\n INVALID CHOICE \n");
+                          break;
         }
    }while(choice!=4);
 
