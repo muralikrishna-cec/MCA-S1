@@ -82,15 +82,11 @@ void display()
     }
   
         printf("\n QUEUE ELEMENTS ARE : ");
-        while(1)
-        {
-            printf("%d ",temp->data);
-            if(temp->next ==front)
-            {
-                break;
-            }
-            temp=temp->next;
-        }
+
+       do {
+           printf("%d ", temp->data);
+           temp = temp->next;
+        } while (temp != front);
         printf("\n");
     }
 
