@@ -36,9 +36,7 @@ void insertFirst()
     
     printf("\n Element inserted %d",newnode->data);
   
-  }
-
-
+ }
 
 
 //insert last
@@ -71,9 +69,7 @@ void insertLast()
     
     }
     printf("element inserted successfully  %d",newnode->data);
-  }
-
-
+ }
 
 
 //insert location
@@ -107,18 +103,15 @@ void insertLocation()
             printf("\n Value Not Exist\n");
           }
           else
-           {
-             printf("\n Enter the Element to inserted\n");
-             scanf("%d",&newnode->data);
-             newnode->link=temp->link;
-             temp->link=newnode;
-             printf("value inserted successfully %d",newnode->data); 
-            } 
-          }
+          {
+            printf("\n Enter the Element to inserted\n");
+            scanf("%d",&newnode->data);
+            newnode->link=temp->link;
+            temp->link=newnode;
+            printf("value inserted successfully %d",newnode->data); 
+          } 
       }
-
-
-
+ }
 
 //delete first
 void deleteFirst()
@@ -239,10 +232,6 @@ void search()
 }
 
 
-
-
-
-
 //display
 void display()
 {
@@ -296,20 +285,9 @@ void main()
                   
           default: printf("\n INVALID CHOICE \n");        
        
-       
        }                         
    
    }while(choice!=9);
 
-
 }
-
-
-
-
-/*
-Program Information:
-  - Program Name: SINGLY LINKED LIST  
-  - Coded By: CRISS CROSS
-*/
 

@@ -32,6 +32,7 @@ struct node
      }
      else{
       newnode->Rlink=head;
+      head->Llink = newnode;
       head=newnode;
      }
      printf("\n %d inserted sucessfully",newnode->data);
@@ -165,48 +166,46 @@ struct node
  }   
    
 
- //deletelocation  
- void deleteLocation()
- {
-    struct node *temp=head,*nxt,*nxt1;
+ void deleteLocation() {
+    struct node *temp = head, *prev, *next;
     int key;
-    
-    if(head==NULL){
-       printf("\n LIST IS EMPTY \n");
-       return;
+
+    if (head == NULL) {
+        printf("\n LIST IS EMPTY \n");
+        return;
     }
-    
-    printf("\n enter the key which you want to delete \n");
-    scanf("%d",&key);
-     
-        while(temp!=NULL && temp->data!=key){
-             temp=temp->Rlink;
+
+    printf("\n Enter the key which you want to delete: \n");
+    scanf("%d", &key);
+
+    while (temp != NULL && temp->data != key) {
+        temp = temp->Rlink;
+    }
+
+    if (temp == NULL) {
+        printf("\n NO ELEMENT FOUND \n");
+        return;
+    }
+
+    if (temp->Llink == NULL) { // single Node
+        head = temp->Rlink;
+        if (head != NULL) {
+            head->Llink = NULL;
         }
-        if(temp==NULL){
-           printf("\n NO ELEMENT FOUND \n");
-           return;
-        }
-        if(temp->Llink==NULL && temp->Rlink==NULL){  //single node
-          head=NULL;
-        }
-        else if(temp->Rlink==NULL){  //last node
-         nxt=temp->Llink;
-         nxt->Rlink=NULL;
-        }
-        else{ 
-            nxt=temp->Rlink;
-            nxt1=temp->Llink;
-            
-            nxt->Llink=nxt1;
-            nxt1->Rlink=nxt;
-        }     
-       
-    printf("%d Deleted succesfully",temp->data); 
+    } else if (temp->Rlink == NULL) { //  last node
+        temp->Llink->Rlink = NULL;
+    } else { // middle node
+        prev = temp->Llink;
+        next = temp->Rlink;
+        prev->Rlink = next;
+        next->Llink = prev;
+    }
+
+    printf("%d Deleted successfully\n", temp->data);
     free(temp); 
-       
-    
- }
-   
+
+ } 
+
  //display
  void display()
  {
