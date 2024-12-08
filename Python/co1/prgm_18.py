@@ -1,15 +1,8 @@
-dict1={
-    "a":"1",
-    "b":"2"
-}
+import math
 
-dict2={
-    "c":"3",
-    "d":"4"
-}
+num1=int(input("enter first number"))
+num2=int(input("enter second number"))
 
-merge=dict1.copy()
+gcd=math.gcd(num1,num2)
 
-merge.update(dict2)
-
-print(merge)
+print(f"Gcd of {num1} and {num2} is {gcd}")

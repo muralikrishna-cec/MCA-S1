@@ -1,8 +1,5 @@
-import math
+list=[1,2,3,4,5,6,7,8,9,10]
 
-num1=int(input("enter first number"))
-num2=int(input("enter second number"))
+newlist=[i for i in list if i%2!=0]
 
-gcd=math.gcd(num1,num2)
-
-print(f"Gcd of {num1} and {num2} is {gcd}")
+print(f"Input List : {list} \n Output List :{newlist}")

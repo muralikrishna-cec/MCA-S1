@@ -1,12 +1,15 @@
-bio={
-    "name":"murali",
-     "age":"24",
-     "qual":"mca",
-     "type":"men" 
+dict1={
+    "a":"1",
+    "b":"2"
 }
 
-print(bio)
-asc=dict(sorted(bio.items()))
-print(asc)
-dsc=dict(sorted(bio.items() ,reverse=True))
-print(dsc)
+dict2={
+    "c":"3",
+    "d":"4"
+}
+
+merge=dict1.copy()
+
+merge.update(dict2)
+
+print(merge)
