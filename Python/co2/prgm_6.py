@@ -8,3 +8,10 @@ for index,value in s.items():
     print(f"{index} {value}")
      
     
+#another logic
+str=input("Enter the string ")
+dict={}
+for i in set(str):
+    dict[i]=str.count(i) 
+print("WORD ELEMENT COUNT ",dict)    
+    
