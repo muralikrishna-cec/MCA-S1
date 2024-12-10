@@ -1,3 +1,5 @@
+
+#class1
 class Publisher:
     def __init__(self,name):
         self.name=name
@@ -5,7 +7,7 @@ class Publisher:
     def display(self):
         print(f"Pulisher : {self.name}")   
  
-        
+#class2        
 class Book(Publisher):
     def __init__(self,name,title,author):
         super().__init__(name)        
@@ -17,7 +19,7 @@ class Book(Publisher):
         print(f"Title : {self.title}")    
         print(f"Author : {self.author}")
         
-        
+#class3        
 class Python(Book):
     def __init__(self,name,title,author,price,no_pages):
         super().__init__(name,title,author)
@@ -28,6 +30,7 @@ class Python(Book):
         super().display()     
         print(f"Price : {self.price}")  
         print(f"NO Of Pages {self.no_pages}")   
-        
+ 
+#object        
 ob1=Python("Murali Krishna","Becoming heartless","__MK",500,1000)         
 ob1.display() 

@@ -21,7 +21,6 @@ rect1=Rectangle(4,5)
 rect2=Rectangle(6,6)
 
 if rect1 < rect2:
-    print("recatangle 2 is larger")
-    
+    print("recatangle 2 is larger") 
 else:
     print("rectangle 1 is larger")             
