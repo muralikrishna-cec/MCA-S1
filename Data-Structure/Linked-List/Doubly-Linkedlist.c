@@ -22,7 +22,8 @@ struct node
       return;
      }
      
-     newnode->Llink,newnode->Rlink=NULL;
+     newnode->Llink = NULL; 
+     newnode->Rlink = NULL;
      
      printf("\n Enter the element to insert");
      scanf("%d",&newnode->data);
@@ -50,7 +51,9 @@ struct node
         printf("\n No space available");
         return;
      }
-     newnode->Llink,newnode->Rlink=NULL;
+    
+     newnode->Llink = NULL; 
+     newnode->Rlink = NULL;
     
      printf("\n enter the element to insert");
      scanf("%d",&newnode->data);
@@ -106,7 +109,7 @@ struct node
         else{
            nxt=temp->Rlink;          //middle node
            newnode->Llink=temp;
-           newnode->Rlink=temp->Rlink;
+           newnode->Rlink=nxt;
            temp->Rlink=newnode;
            nxt->Llink=newnode;
         }
@@ -150,7 +153,7 @@ struct node
   }
     
   if(temp->Rlink==NULL){
-    printf("\n %d is deleted",head->data);
+    printf("\n %d is deleted",temp->data);
     head=NULL;     
   }
   else{
@@ -192,9 +195,11 @@ struct node
         if (head != NULL) {
             head->Llink = NULL;
         }
-    } else if (temp->Rlink == NULL) { //  last node
-        temp->Llink->Rlink = NULL;
-    } else { // middle node
+    }
+    else if (temp->Rlink == NULL) { //  last node
+         temp->Llink->Rlink = NULL;
+    } 
+    else { // middle node
         prev = temp->Llink;
         next = temp->Rlink;
         prev->Rlink = next;
