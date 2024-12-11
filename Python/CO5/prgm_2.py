@@ -1,12 +1,13 @@
     
-with open("test.txt", "r") as file:
+with open("/var/www/html/Web_programming/Python/CO5/test.txt", "r") as file:
     data = file.readlines()
 
-with open("odd_lines.txt", "w") as outfile:
+with open("/var/www/html/Web_programming/Python/CO5/odd_lines.txt", "w") as outfile:
     for i in range(0, len(data), 2):
-        print(data[i]) 
+        #print(data[i]) 
         outfile.write(data[i])
         
+
    
            
 """
