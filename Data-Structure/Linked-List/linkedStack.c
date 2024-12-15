@@ -5,9 +5,8 @@ struct node{
  int data;
  struct node* link;
 };
+
 struct node *top=NULL;
-
-
 
 
 //insertfirst
@@ -58,16 +57,13 @@ void pop()
  {
    struct node *temp=top;
    
-   if(top == NULL)
-   {
+   if(top == NULL){
      printf("\n NO ELEMENTS");
      return;
    }
    
    printf("\n ELEMENTS IN LIST ARE \n");
-   while(temp!=NULL)
-   {
-   
+   while(temp!=NULL){
     printf("%d ",temp->data);
     temp=temp->link;
    }
@@ -75,7 +71,6 @@ void pop()
  
  
  //peek
-
  void peek()
  {
    struct node*temp=top;
@@ -96,8 +91,7 @@ void search()
  
  int key,found=0;
  
- if(top==NULL)
- {
+ if(top==NULL){
    printf("\n STACK UNDERFLOW \n");
    return;
  }
@@ -105,19 +99,15 @@ void search()
  printf("\n ENTER THE ELEMENT TO SEARCH \n");
  scanf("%d",&key);
  
- while(temp!=NULL)
- {
-  if(temp->data ==key)
-  {
-   printf("\n %d ELEMENT FOUNDED \n",temp->data);
-   found=1;
-  }
-  temp=temp->link;
-
+ while(temp!=NULL) {
+   if(temp->data ==key) {
+     printf("\n %d ELEMENT FOUNDED \n",temp->data);
+     found=1;
+   }
+   temp=temp->link;
  }
  
- if(!found)
- {
+ if(!found) {
   printf("\n ELEMENT NOT FOUND");
  }
 
@@ -129,7 +119,6 @@ void main()
 {
    int choice;
    
-   
    do{
        printf("\n *****STACK*****\n");
        printf("\n 1->push() \n 2-> pop() \n 3->peek() \n 4-> display() \n 5->search() \n 6->EXIT");
@@ -137,8 +126,7 @@ void main()
        printf("\n ENTER THE CHOICE \n");
       scanf("%d",&choice);
       
-      switch(choice)
-      {
+      switch(choice)  {
         case 1:  push();
                  break;
         case 2:  pop();

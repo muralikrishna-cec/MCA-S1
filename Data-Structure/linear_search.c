@@ -15,8 +15,7 @@ printf("\n Enter the value to be searched");
  scanf("%d",&key);
  
  for(i=0;i<n;i++){
-    if(array[i]==key)
-    {
+    if(array[i]==key) {
       printf("\n element found at %d th index",i);
       flag++;
     } 

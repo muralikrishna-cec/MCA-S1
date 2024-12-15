@@ -7,8 +7,7 @@ int front=-1,rear=-1;
 // Check for queue overflow condition
 int isFull()
 {
-  if((rear+1) % MAX == front)
-  {
+  if((rear+1) % MAX == front) {
     return 1;
   }
   return 0;
@@ -17,8 +16,7 @@ int isFull()
 // Check for queue underflow condition
 int isEmpty()
 {
-   if(front==-1 && rear==-1)
-    {
+   if(front==-1 && rear==-1) {
       return 1;
     }
     return 0;
@@ -30,8 +28,7 @@ void enqueue()
 {
   int x;
 
-  if(isFull())
-  {
+  if(isFull()) {
     printf("\n QUEUE IS FULL \n");
     return;
   }
@@ -39,12 +36,10 @@ void enqueue()
   printf("Enter the element to insert ");
   scanf("%d",&x);
 
-  if(isEmpty())
-  {
+  if(isEmpty()) {
     front=rear=0;
   }
-  else
-  {
+  else {
     rear= (rear+1) % MAX;
   }
    queue[rear]=x; 
@@ -54,16 +49,14 @@ void enqueue()
 //dequeue
 void dequeue()
 {
-    if(isEmpty())
-    {
+    if(isEmpty()) {
         printf("\n QUEUE IS EMPTY \n");
         return;
     }
 
     printf("\n %d is DELETED \n",queue[front]);
 
-    if(front == rear)
-    {
+    if(front == rear) {
        front = rear = -1;
     }
     else{
@@ -76,8 +69,7 @@ void display()
 {
     int i;
     
-    if(isEmpty())
-    {
+    if(isEmpty()) {
         printf("\n QUEUE IS EMPTY \n");
         return;
     }
@@ -86,11 +78,9 @@ void display()
 
     i=front;
 
-    while(1)
-    {
+    while(1) {
       printf("%d ",queue[i]);
-      if(i == rear)
-      {
+      if(i == rear) {
         break;
       }
       i=(i+1)%MAX;
@@ -111,8 +101,7 @@ int main()
         printf("Enter your choice: ");
         scanf("%d", &choice);
         
-        switch (choice) 
-        {
+        switch (choice)  {
 
                  case 1: enqueue();
                          break;

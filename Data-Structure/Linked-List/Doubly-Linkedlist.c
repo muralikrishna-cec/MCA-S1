@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-
 struct node
 {
    int data;
@@ -40,7 +39,6 @@ struct node
    
    }
    
-   
    //insert last
    void insertLast()
    {
@@ -62,9 +60,9 @@ struct node
         head=newnode;
      }
      else{
-          while(temp->Rlink!=NULL) {
+         while(temp->Rlink!=NULL) {
               temp=temp->Rlink;
-            }
+         }
           newnode->Llink=temp;
           temp->Rlink=newnode;
      }
@@ -72,56 +70,55 @@ struct node
    }
    
 
- //insert Location
- void insertLocation()
- {
-   struct node *newnode,*temp=head,*nxt;
-   int key;
-   newnode=(struct node*)malloc(sizeof(struct node));
+  //insert Location
+   void insertLocation()
+   {
+     struct node *newnode,*temp=head,*nxt;
+     int key;
+     newnode=(struct node*)malloc(sizeof(struct node));
    
-   if(newnode==NULL){
-    printf("\n No space Available \n");
-    return;
-   }
-   if(head==NULL){
-     printf("\n List is empty \n");
-   }
-   else{
-        printf("\n enter the key were after you want to insert the element \n");
-        scanf("%d",&key);
+     if(newnode==NULL){
+        printf("\n No space Available \n");
+        return;
+      }
+      if(head==NULL){
+         printf("\n List is empty \n");
+      }
+      else{
+         printf("\n enter the key were after you want to insert the element \n");
+         scanf("%d",&key);
 
-        while(temp!=NULL && temp->data!=key){
+         while(temp!=NULL && temp->data!=key){
               temp=temp->Rlink;
-          }
+         }
 
-        if(temp==NULL){
+         if(temp==NULL){
             printf("\n NO ELEMENT FOUND \n");
             return;
-        }
-        printf("\n enter the element to insert \n");
-        scanf("%d",&newnode->data);
+         }
+         printf("\n enter the element to insert \n");
+         scanf("%d",&newnode->data);
          
-        if(temp->Rlink==NULL){     //lastnode,firstnode
+         if(temp->Rlink==NULL){     //lastnode,firstnode
            newnode->Llink=temp;
            newnode->Rlink=NULL;
            temp->Rlink=newnode;
-        }
-        else{
+         }
+         else{
            nxt=temp->Rlink;          //middle node
            newnode->Llink=temp;
            newnode->Rlink=nxt;
            temp->Rlink=newnode;
            nxt->Llink=newnode;
-        }
-      printf("%d inserted succesfully",newnode->data);
-   }
- 
- }  
+         }
+       printf("%d inserted succesfully",newnode->data);
+      }
+   }  
     
    
- //delete first
- void deleteFirst()
- {
+   //delete first
+   void deleteFirst()
+   {
     struct node *temp=head,*nxt;
     
     if(head==NULL){
@@ -132,44 +129,44 @@ struct node
     printf("\n %d is deleted",temp->data);
     if(temp->Rlink==NULL){ //single node
       head=NULL;
-   }
-   else{ 
+    }
+    else{ 
        nxt=temp->Rlink;
        head=nxt;
        nxt->Llink=NULL;
-   }
+    }
     free(temp);
- }
+   }
    
    
- //delete last
- void deleteLast()
- {
-  struct node *temp=head,*nxt;
+   //delete last
+   void deleteLast()
+   {
+    struct node *temp=head,*nxt;
   
-  if(head==NULL){
-    printf("\n LIST IS EMPTY \n");
-    return;
-  }
+    if(head==NULL){
+       printf("\n LIST IS EMPTY \n");
+       return;
+    }
     
-  if(temp->Rlink==NULL){
-    printf("\n %d is deleted",temp->data);
-    head=NULL;     
-  }
-  else{
-      while(temp->Rlink!=NULL){
-       temp=temp->Rlink;
-      }
-      printf("\n %d is deleted",temp->data);
-      nxt=temp->Llink;
-      nxt->Rlink=NULL;
-  }
-   free(temp);
-
- }   
+    if(temp->Rlink==NULL){
+       printf("\n %d is deleted",temp->data);
+       head=NULL;     
+    }
+    else{
+       while(temp->Rlink!=NULL){
+         temp=temp->Rlink;
+       }
+       printf("\n %d is deleted",temp->data);
+       nxt=temp->Llink;
+       nxt->Rlink=NULL;
+    }
+    free(temp);
+   }   
    
-
- void deleteLocation() {
+   //delete location
+   void deleteLocation() 
+   {
     struct node *temp = head, *prev, *next;
     int key;
 
@@ -231,13 +228,13 @@ struct node
  }
    
    
- //search
- void search()
- {
-   int key,pos=0,found=0;
-   struct node *temp=head;
+  //search
+  void search()
+  {
+    int key,pos=0,found=0;
+    struct node *temp=head;
   
-   if(head==NULL){
+    if(head==NULL){
       printf("\n LIST EMPTY \n");
       return;
     }
@@ -252,13 +249,12 @@ struct node
         }
         temp=temp->Rlink;
         pos++;
-  }
+    }
   
-  if(!found){
-     printf("\n ELEMENT NOT FOUND \n");
-  }
- 
- }  
+    if(!found){
+       printf("\n ELEMENT NOT FOUND \n");
+    }
+   }  
    
    
    //main

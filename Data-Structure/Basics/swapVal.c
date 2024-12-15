@@ -8,10 +8,12 @@ void main()
 
 int swapVal()
 {
-int a,b,t;
-printf("Enter two number to swap");
-scanf("%d %d",&a,&b);
+ int a,b,t;
+ printf("Enter two number to swap");
+ scanf("%d %d",&a,&b);
+
  printf(" value before swap num1=%d num2 = %d",a,b);
+ 
  t=a;
  a=b;
  b=t;

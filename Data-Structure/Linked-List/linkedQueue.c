@@ -8,8 +8,6 @@ struct node{
 struct node *head=NULL;
 
 
-
-
 //insertlast
 void enqueue()
 {
@@ -17,8 +15,7 @@ void enqueue()
   
   newnode=(struct node*)malloc(sizeof(struct node));
   
-  if(newnode ==NULL)
-  {
+  if(newnode ==NULL){
    printf("\n NO SPACE AVAILABLE \n");
    return;
   }
@@ -27,31 +24,25 @@ void enqueue()
   printf("\n ENTER THE ELEMENT TO INSERT \n");
   scanf("%d",&newnode->data);
   
-  if(head==NULL)
-  {
+  if(head==NULL){
     head=newnode;
   }
   else{
-      while(temp->link!=NULL)
-      {
+      while(temp->link!=NULL) {
         temp=temp->link;
       }
       temp->link=newnode;
   }
-    printf("\n  %d ELEMENT INSERTED SUCCESSFULLY \n",newnode->data);
+  printf("\n  %d ELEMENT INSERTED SUCCESSFULLY \n",newnode->data);
 
 }
-
-
-
 
 // delete first
 void dequeue()
 {
   struct node *temp=head;
   
-  if(head==NULL)
-  {
+  if(head==NULL) {
    printf("\n NO ELEMENTS \n");
    return;
   }
@@ -60,80 +51,67 @@ void dequeue()
   free(temp);
 }
 
-
 //display
  void display()
  {
    struct node *temp=head;
    
-   if(head == NULL)
-   {
+   if(head == NULL) {
      printf("\n NO ELEMENTS");
      return;
    }
    
    printf("\n ELEMENTS IN QUEUE ARE \n");
-   while(temp!=NULL)
-   {
-   
-    printf("%d ",temp->data);
-    temp=temp->link;
+   while(temp!=NULL) { 
+     printf("%d ",temp->data);
+     temp=temp->link;
    }
  }
  
  //search
-void search()
-{
- struct node *temp=head;
- 
- int key,pos=0,found=0;
- 
- if(head==NULL)
+ void search()
  {
-   printf("\n QUEUE EMPTY\n");
-   return;
- }
+   struct node *temp=head;
+   int key,pos=0,found=0;
  
- printf("\n ENTER THE ELEMENT TO SEARCH \n");
- scanf("%d",&key);
+   if(head==NULL){
+     printf("\n QUEUE EMPTY\n");
+     return;
+   }
  
- while(temp!=NULL)
- {
-  if(temp->data ==key)
-  {
-   printf("\n %d ELEMENT FOUND AT %d \n",temp->data,pos);
-   found=1;
-  }
-  temp=temp->link;
-  pos++;
+   printf("\n ENTER THE ELEMENT TO SEARCH \n");
+   scanf("%d",&key);
  
- }
+   while(temp!=NULL){
+     if(temp->data ==key){
+       printf("\n %d ELEMENT FOUND AT %d \n",temp->data,pos);
+       found=1;
+     }
+     temp=temp->link;
+     pos++;
+   }
  
- if(!found)
- {
-  printf("\n ELEMENT NOT FOUND");
- }
+   if(!found){
+     printf("\n ELEMENT NOT FOUND");
+   }
 
-}
+ }
 
  
  
  //main
-void main()
-{
+ void main()
+ {
    int choice;
    
-  
    do{
-    printf("\n *****QUEUE*****\n");
-   
-   printf("\n 1->Enqueue() \n 2-> Dequeue() \n 3-> display() \n 4->search() \n 5->EXIT");
-   
-       printf("\n ENTER THE CHOICE \n");
+     printf("\n *****QUEUE*****\n");
+     printf("\n 1->Enqueue() \n 2-> Dequeue() \n 3-> display() \n 4->search() \n 5->EXIT");
+     
+      printf("\n ENTER THE CHOICE \n");
       scanf("%d",&choice);
       
-      switch(choice)
-      {
+      switch(choice) {
         case 1:  enqueue();
                  break;
         case 2:  dequeue();
@@ -150,5 +128,4 @@ void main()
       }
     
    }while(choice!=5);
-  
-}
+  }

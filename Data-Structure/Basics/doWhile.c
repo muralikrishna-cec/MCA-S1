@@ -4,12 +4,10 @@ void main()
   int limit;
   printf("Enter the limit");
   scanf("%d",&limit);
-   do 
-    {
+   do {
       printf("hi %d \n",limit);
       limit--;
-    }
-    while(limit>0);
+    } while(limit>0);
 
 }
 

@@ -17,8 +17,7 @@ void enqueue()
     struct node *newnode;
     newnode=(struct node*)malloc(sizeof(struct node));
 
-    if(newnode == NULL)
-    {
+    if(newnode == NULL) {
         printf("\n NO SPACE AVAILABLE \n");
         return;
     }
@@ -28,13 +27,11 @@ void enqueue()
     printf("\n ENTER THE ELEMENT TO INSERT \n");
     scanf("%d",&newnode->data);
 
-    if(rear==NULL)
-    {
+    if(rear==NULL){
         front = rear = newnode;
         newnode->next=front;
     }
-    else
-    {
+    else{
        rear->next=newnode;
        rear=newnode;
        newnode->next=front;
@@ -48,8 +45,7 @@ void dequeue()
 {
     struct node *temp=front;
 
-    if(front == NULL && rear == NULL)
-    {
+    if(front == NULL && rear == NULL){
         printf("\n QUEUE UNDER FLOW \n");
         return;
     }
@@ -57,12 +53,10 @@ void dequeue()
     printf("\n %d is Deleted \n",front->data);
 
     // Only one element in the queue
-    if(front == rear)
-    {
+    if(front == rear) {
       front=rear=NULL; 
     }
-    else  // More than one element
-    {
+    else { // More than one element
       front=temp->next;
       rear->next = front;
     }
@@ -70,26 +64,25 @@ void dequeue()
    
 }
 
-//display
-void display()
-{
+ //display
+ void display()
+ {
     struct node *temp=front;
 
-    if(front == NULL && rear == NULL)
-    {
+    if(front == NULL && rear == NULL) {
         printf("\n QUEUE UNDER FLOW \n");
         return;
     }
   
-        printf("\n QUEUE ELEMENTS ARE : ");
+    printf("\n QUEUE ELEMENTS ARE : ");
 
-       do {
-           printf("%d ", temp->data);
-           temp = temp->next;
-        } while (temp != front);
-        printf("\n");
-    }
+    do {
+        printf("%d ", temp->data);
+        temp = temp->next;
+    } while (temp != front);
 
+    printf("\n");
+ }
 
 
 //Main
@@ -104,23 +97,21 @@ int main()
         printf("Enter your choice: ");
         scanf("%d", &choice);
         
-        switch (choice) 
-        {
+        switch (choice)  {
+            case 1: enqueue();
+                    break;
 
-                 case 1: enqueue();
-                         break;
+            case 2: dequeue();
+                    break;
 
-                 case 2: dequeue();
-                         break;
-
-                 case 3: display();
-                         break;
+            case 3: display();
+                    break;
                          
-                 case 4: printf("\n Exiting.... \n");
-                         return 0;
+            case 4: printf("\n Exiting.... \n");
+                    return 0;
 
-                 default: printf("\n INVALID CHOICE \n");
-                          break;
+            default: printf("\n INVALID CHOICE \n");
+                    break;
         }
    }while(choice!=4);
 
