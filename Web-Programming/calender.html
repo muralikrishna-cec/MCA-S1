@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Calendar</title>
+</head>
+<body>
+
+<h2>Generate Calendar for a Year</h2>
+
+<!-- Input for year -->
+<input type="number" id="year" placeholder="Enter year">
+<button onclick="generateCalendar()">Generate</button>
+
+<div id="calendar"></div>
+
+<script>
+    function generateCalendar() {
+        const year = document.getElementById("year").value;
+        const calendarDiv = document.getElementById("calendar");
+        calendarDiv.innerHTML = ''; // Clear previous content
+
+        // Loop through each month (0 to 11)
+        for (let month = 0; month < 12; month++) {
+            const firstDay = new Date(year, month, 1); // First day of the month
+            const daysInMonth = new Date(year, month + 1, 0).getDate(); // Total days in the month
+            const monthName = firstDay.toLocaleString('default', { month: 'long' }); // Get month name
+
+            // Create table for the current month
+            let monthHTML = `<h3>${monthName} ${year}</h3><table border="1"><tr>`;
+
+            // Add day names header
+            monthHTML += "<th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr><tr>";
+
+            // Add empty cells for days before the first day of the month
+            for (let i = 0; i < firstDay.getDay(); i++) {
+                monthHTML += "<td></td>";
+            }
+
+            // Add days of the month
+            for (let day = 1; day <= daysInMonth; day++) {
+                if ((firstDay.getDay() + day - 1) % 7 === 0 && day !== 1) {
+                    monthHTML += "</tr><tr>"; // New row for every week
+                }
+                monthHTML += `<td>${day}</td>`; // Add day
+            }
+
+            monthHTML += "</tr></table>"; // Close the table
+            calendarDiv.innerHTML += monthHTML; // Append month table to calendar div
+        }
+    }
+</script>
+
+</body>
+
+<!--
+    ******************ANOTHER LOGIC*************************************
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Calendar</title>
+</head>
+<body>
+
+<h2>Generate Calendar for a Year</h2>
+
+ Input for year -
+<input type="number" id="year" placeholder="Enter year">
+<button onclick="generateCalendar()">Generate</button>
+
+<div id="calendar"></div>
+
+<script>
+    function generateCalendar() {
+        const year = document.getElementById("year").value;
+        const calendarDiv = document.getElementById("calendar");
+        calendarDiv.innerHTML = ''; // Clear previous content
+
+        for (let month = 0; month < 12; month++) {
+            const firstDay = new Date(year, month, 1);
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            
+            let monthHTML = <h3>${firstDay.toLocaleString('default', { month: 'long' })}</h3><ul>;
+
+            for (let day = 1; day <= daysInMonth; day++) {
+                monthHTML += <li>${day}</li>;
+            }
+
+            monthHTML += "</ul>";
+            calendarDiv.innerHTML += monthHTML;
+        }
+    }
+</script>
+
+</body>
+</html>  
+-->
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Example</title>
+</head>
+<body>
+
+    <div id="content" onmouseover="showContent()" onmouseout="hideContent()">
+        Hover over this text to see new content!
+    </div>
+
+    <div id="newContent" style="display:none;">
+        <p>New text appears here!</p>
+    </div>
+
+    <img id="newImage" height="300px" width="250px" src="Cycle_2/prgm_9.jpg" style="display:none;">
+
+    <script>
+        function showContent() {
+            document.getElementById('newContent').style.display = 'block';
+            document.getElementById('newImage').style.display = 'block';
+        }
+
+        function hideContent() {
+            document.getElementById('newContent').style.display = 'none';
+            document.getElementById('newImage').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
