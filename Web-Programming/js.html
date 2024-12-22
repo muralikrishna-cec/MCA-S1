@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript String and Math Functions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        .example {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        code {
+            color: #2a2a2a;
+            background-color: #f4f4f4;
+            padding: 2px 5px;
+            font-family: Consolas, "Courier New", monospace;
+        }
+    </style>
+</head>
+<body>
+
+<h1>JavaScript String and Math Functions</h1>
+
+<h2>String Methods</h2>
+
+<p><strong>String Methods</strong> are predefined functions that allow you to manipulate or analyze strings.</p>
+
+<h3>1. <code>length</code></h3>
+<p>The <code>length</code> property returns the number of characters in a string.</p>
+<div class="example">
+    <code>let str = "Hello";</code><br>
+    <code>console.log(str.length);</code><br>
+    <strong>Output:</strong> <code>5</code>
+</div>
+
+<h3>2. <code>toUpperCase()</code></h3>
+<p>The <code>toUpperCase()</code> method converts a string to uppercase letters.</p>
+<div class="example">
+    <code>let str = "hello";</code><br>
+    <code>console.log(str.toUpperCase());</code><br>
+    <strong>Output:</strong> <code>HELLO</code>
+</div>
+
+<h3>3. <code>toLowerCase()</code></h3>
+<p>The <code>toLowerCase()</code> method converts a string to lowercase letters.</p>
+<div class="example">
+    <code>let str = "HELLO";</code><br>
+    <code>console.log(str.toLowerCase());</code><br>
+    <strong>Output:</strong> <code>hello</code>
+</div>
+
+<h3>4. <code>indexOf()</code></h3>
+<p>The <code>indexOf()</code> method returns the index of the first occurrence of a specified value in a string.</p>
+<div class="example">
+    <code>let str = "Hello, world!";</code><br>
+    <code>console.log(str.indexOf("world"));</code><br>
+    <strong>Output:</strong> <code>7</code>
+</div>
+
+<h3>5. <code>substring()</code></h3>
+<p>The <code>substring()</code> method extracts a portion of a string between two specified indices.</p>
+<div class="example">
+    <code>let str = "Hello, world!";</code><br>
+    <code>console.log(str.substring(7, 12));</code><br>
+    <strong>Output:</strong> <code>world</code>
+</div>
+
+<h2>Math Methods</h2>
+
+<p><strong>Math Methods</strong> are predefined functions that allow you to perform mathematical operations.</p>
+
+<h3>1. <code>Math.max()</code></h3>
+<p>The <code>Math.max()</code> method returns the largest of the numbers given as input.</p>
+<div class="example">
+    <code>console.log(Math.max(5, 10, 3));</code><br>
+    <strong>Output:</strong> <code>10</code>
+</div>
+
+<h3>2. <code>Math.min()</code></h3>
+<p>The <code>Math.min()</code> method returns the smallest of the numbers given as input.</p>
+<div class="example">
+    <code>console.log(Math.min(5, 10, 3));</code><br>
+    <strong>Output:</strong> <code>3</code>
+</div>
+
+<h3>3. <code>Math.random()</code></h3>
+<p>The <code>Math.random()</code> method generates a random number between 0 (inclusive) and 1 (exclusive).</p>
+<div class="example">
+    <code>console.log(Math.random());</code><br>
+    <strong>Output:</strong> A random number like <code>0.3745426870378369</code>
+</div>
+
+<h3>4. <code>Math.floor()</code></h3>
+<p>The <code>Math.floor()</code> method rounds a number downward to the nearest integer.</p>
+<div class="example">
+    <code>console.log(Math.floor(3.7));</code><br>
+    <strong>Output:</strong> <code>3</code>
+</div>
+
+<h3>5. <code>Math.ceil()</code></h3>
+<p>The <code>Math.ceil()</code> method rounds a number upward to the nearest integer.</p>
+<div class="example">
+    <code>console.log(Math.ceil(3.7));</code><br>
+    <strong>Output:</strong> <code>4</code>
+</div>
+
+<h3>6. <code>Math.pow()</code></h3>
+<p>The <code>Math.pow()</code> method returns the base to the exponent power (base^exponent).</p>
+<div class="example">
+    <code>console.log(Math.pow(2, 3));</code><br>
+    <strong>Output:</strong> <code>8</code>
+</div>
+
+</body>
+</html>
