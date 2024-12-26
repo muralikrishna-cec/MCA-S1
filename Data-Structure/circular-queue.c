@@ -89,6 +89,35 @@ void display()
 }
 
 
+// Search 
+void search() {
+    int key, found = 0;
+
+    if (isEmpty()) {
+        printf("\n QUEUE IS EMPTY \n");
+        return;
+    }
+
+    printf("\nEnter the element to search: ");
+    scanf("%d", &key);
+
+    
+    for (int i = front; ; i = (i + 1) % MAX) {
+        if (queue[i] == key) {
+            printf("\nElement %d found at position %d.\n", key, i);
+            found = 1;
+            break;
+        }
+        if (i == rear) {
+            break; 
+        }
+    }
+
+    if (!found) {
+        printf("\nElement %d not found in the queue.\n", key);
+    }
+}
+
 //Main
 int main()
 {
@@ -112,13 +141,14 @@ int main()
                  case 3: display();
                          break;
                          
-                 case 4: printf("\n Exiting.... \n");
+                 case 4: search();
+                         break;
+                 case 5: printf("\n Exiting.... \n");
                          return 0;
-
                  default: printf("\n INVALID CHOICE \n");
                           break;
         }
-   }while(choice!=4);
+    } while (choice != 5);
 
    return 0;
 }
