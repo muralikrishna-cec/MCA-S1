@@ -77,21 +77,17 @@ void display()
     printf("\n QUEUE ELEMENTS: ");
 
     i=front;
-
-    while(1) {
-      printf("%d ",queue[i]);
-      if(i == rear) {
-        break;
-      }
-      i=(i+1)%MAX;
-    }
+  do {
+        printf("%d ", queue[i]);
+        i = (i + 1) % MAX;
+    } while (i != (rear + 1) % MAX); 
     printf("\n");
 }
 
 
 // Search 
 void search() {
-    int key, found = 0;
+    int key, i,found = 0;
 
     if (isEmpty()) {
         printf("\n QUEUE IS EMPTY \n");
@@ -102,16 +98,15 @@ void search() {
     scanf("%d", &key);
 
     
-    for (int i = front; ; i = (i + 1) % MAX) {
+   i = front;
+    do {
         if (queue[i] == key) {
             printf("\nElement %d found at position %d.\n", key, i);
             found = 1;
             break;
         }
-        if (i == rear) {
-            break; 
-        }
-    }
+        i = (i + 1) % MAX;
+    } while (i != (rear + 1) % MAX);
 
     if (!found) {
         printf("\nElement %d not found in the queue.\n", key);
@@ -126,7 +121,7 @@ int main()
     printf("\n CIRCULAR QUEUE USING ARRAYS \n");
 
    do{
-        printf("\n1. ENQUEUE\n2. DEQUEUE\n3. DISPLAY\n4. EXIT\n");
+        printf("\n1. ENQUEUE\n2. DEQUEUE\n3. DISPLAY\n4. SEARCH\n5. EXIT\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
         
