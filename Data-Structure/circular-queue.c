@@ -77,10 +77,11 @@ void display()
     printf("\n QUEUE ELEMENTS: ");
 
     i=front;
-  do {
-        printf("%d ", queue[i]);
-        i = (i + 1) % MAX;
-    } while (i != (rear + 1) % MAX); 
+  do{
+      printf("%d ", queue[i]);
+      i = (i + 1) % MAX;
+  } while (i != (rear + 1) % MAX); 
+
     printf("\n");
 }
 
@@ -98,17 +99,18 @@ void search() {
     scanf("%d", &key);
 
     
-   i = front;
-    do {
+    i = front;
+    do{
         if (queue[i] == key) {
             printf("\nElement %d found at position %d.\n", key, i);
             found = 1;
             break;
         }
         i = (i + 1) % MAX;
+
     } while (i != (rear + 1) % MAX);
 
-    if (!found) {
+    if(!found) {
         printf("\nElement %d not found in the queue.\n", key);
     }
 }

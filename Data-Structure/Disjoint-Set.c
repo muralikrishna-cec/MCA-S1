@@ -6,15 +6,15 @@ int parent[MAX];
 void makeSet(int n)
 {
     for(int i=0;i<n;i++){
-        parent[i]=i;
+        parent[i] = i;
     }
 }
 
 
 int find(int x)
 {
-    while(x!=parent[x]){
-        x=parent[x];
+    while(x != parent[x]){
+        x = parent[x];
     }
     return x;
 }
@@ -25,8 +25,8 @@ void unionSet(int x,int y)
     int rootX=find(x);
     int rootY=find(y);
 
-    if(rootX!=rootY){
-        parent[rootX]=rootY;
+    if(rootX != rootY){
+        parent[rootX] = rootY;
     }
 }
 
@@ -39,7 +39,7 @@ int isConnected(int x, int y)
 
 int main()
 {
-    int n=10;
+    int n = 10;
     makeSet(n);
 
     unionSet(1,2);

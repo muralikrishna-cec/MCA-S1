@@ -4,8 +4,11 @@ with open("/var/www/html/Web_programming/Python/CO5/test.txt", "r") as file:
 
 with open("/var/www/html/Web_programming/Python/CO5/odd_lines.txt", "w") as outfile:
     for i in range(0, len(data), 2):
-        #print(data[i]) 
         outfile.write(data[i])
+   
+with open("/var/www/html/Web_programming/Python/CO5/odd_lines.txt", "r") as outfile:        
+    out=[line.strip() for line in outfile.readlines()]
+    print(out)    
         
 
    

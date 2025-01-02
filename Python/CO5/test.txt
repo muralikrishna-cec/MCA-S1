@@ -1,15 +1,20 @@
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
+1 hai
+2 hello
+3 how
+4 are
+5 you
+6 welcome
+7 to
+8 hpme
+9 my 
+10 together
+11 live
+12 happily
+13 hey
+14 below
+15 raw
+16 yellow
+17 brown
+18 black
+19 orange
+20 cat

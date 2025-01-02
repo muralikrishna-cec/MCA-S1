@@ -36,7 +36,7 @@ do{
               
      default : printf("Enter a valid choice");
                break;                                   
-   }
+    }
   }while(choice !=5);
    
 }
@@ -44,12 +44,10 @@ do{
 
 void push()
 {
- if(top >n-1)
- {
+ if(top >n-1) {
    printf("Stack Overflow");
  }
- else
- {
+ else{
    top++;
    printf("Enter the element ");
    scanf(" %d",&val);
@@ -64,8 +62,7 @@ void pop()
  if(top<=-1){
   printf("\n Stack under flow");
  }
- else
- {
+ else{
    printf(" \n %d is popped",stack[top]);
    top--;
    printf("Element popped Sucessfully");
@@ -75,12 +72,10 @@ void pop()
 
 void peek()
 {
- if(top<=-1)
- {
+ if(top<=-1){
    printf("\n Stack under flow");
  }
- else
- {
+ else{
   printf(" \n Top Element = %d",stack[top]);
  }
 }
@@ -88,16 +83,13 @@ void peek()
 
 void display()
 {
- if(top <= -1)
- {
+ if(top <= -1){
    printf("\n Stack is under flow");
  }
- else
- {
-  for(i=top;i>=0;i--)
-  {
-    printf("\n %d",stack[i]);
-  }
+ else{
+   for(i=top;i>=0;i--) {
+      printf("\n %d",stack[i]);
+   }
  }
 }
 
