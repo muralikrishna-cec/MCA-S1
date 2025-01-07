@@ -264,7 +264,7 @@ struct node
     
     do{
        printf("\n*****DOUBLY LINKEDLIST ****\n");
-       printf("\n 1-> insert first \n 2->insert last \n 3->insert Location \n 4->delete fisrt \n 5->delete Last \n 6->delete Location \n 7-> search \n 8->Display \n 9->exit \n");
+       printf("\n 1-> insert First \n 2->insert Last \n 3->insert Location \n 4->delete First \n 5->delete Last \n 6->delete Location \n 7-> Search \n 8->Display \n 9->Exit \n");
        printf("enter the choice ");
        scanf("%d",&choice);
        
