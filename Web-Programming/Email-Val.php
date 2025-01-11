@@ -9,7 +9,9 @@
 
              // Regex 1
 
-            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
+            //var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
+            
+            var mailformat=/^[\w.-]+@[\w.-]+\.[a-zA-z]{2,}$/;
 
             //  Regex 2
             //var mailformat = /^[\w.-]+@[\w.-]+\.[a-zA-Z]{2,}$/;

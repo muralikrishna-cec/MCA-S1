@@ -13,10 +13,16 @@
     $dbuname=$row['uname'];
     $dbpword=$row['password'];
   }
+
+
+
+
   if(isset($dbuname)&& isset($dbpword)){
 
     if($dbuname==$uname && $dbpword==$pword){
+      
       $_SESSION['login_user']=$uname;
+
       header("Location:welcome.php");
     }
     elseif($dbuname==$uname && $dbpword!=$pword){

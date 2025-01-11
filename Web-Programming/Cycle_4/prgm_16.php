@@ -5,9 +5,9 @@
 <body style="text-align: center;">
     <h2>Details of Student</h2>
     <form method="GET" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-        Name: <input type="text" name="name"><br><br>
-        Email id: <input type="email" name="mail"><br><br>
-        Address: <textarea rows="4" name="adrs"></textarea><br><br>
+        Name: <input type="text" name="name" required><br><br>
+        Email id: <input type="email" name="mail" required><br><br>
+        Address: <textarea rows="4" name="adrs" required></textarea><br><br>
         Gender:
         M <input type="radio" value="Male" name="gender">
         F <input type="radio" value="Female" name="gender"><br><br>

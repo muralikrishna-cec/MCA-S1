@@ -40,7 +40,9 @@ void BFS(int graph[MAX][MAX], int start, int n)
     printf("BFS Traversal: ");
     
     while (front < rear) {
+        
         int current = queue[front++];
+
         printf("%d ", current);
 
         for (int i = 0; i < n; i++) {

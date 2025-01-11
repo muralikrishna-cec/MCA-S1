@@ -6,7 +6,7 @@ print("WORD ELEMENT COUNT ",dict)
 
 
 
-#another logic
+#another logic is
 str = "hello hai how are you"
 freq = {}
 
