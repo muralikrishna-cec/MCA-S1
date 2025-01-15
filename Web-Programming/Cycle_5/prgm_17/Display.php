@@ -7,8 +7,7 @@ if (isset($_POST['submit'])) {
     $bookedition = $_POST['bookedition'];
     $bookpub = $_POST['bookpub'];
 
-    $sql = "INSERT INTO BOOK_DETAILS (bookno, title, edition, publisher) 
-            VALUES ('$bookno', '$booktitle', '$bookedition', '$bookpub')";
+    $sql = "INSERT INTO BOOK_DETAILS (bookno, title, edition, publisher) VALUES ('$bookno', '$booktitle', '$bookedition', '$bookpub')";
 
     if (mysqli_query($connection, $sql)) {
         echo "Inserted successfully<br>";
@@ -41,6 +40,7 @@ if (!$query) {
     <tr>
         <?php
             if (mysqli_num_rows($query) > 0) {
+                
                while ($row = mysqli_fetch_assoc($query)){
                   echo "
                    <tr>

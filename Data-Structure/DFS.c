@@ -1,7 +1,10 @@
 #include<stdio.h>
 
 void DFS(int x);
+
 int G[10][10],visited[10],n;
+
+
 
 void main()
 {

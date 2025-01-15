@@ -11,32 +11,6 @@ if (!$conn) {
 echo "Connected successfully<br>";
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 $db = "CREATE DATABASE IF NOT EXISTS $dbname";
 
 if (mysqli_query($conn, $db)) {
@@ -46,25 +20,6 @@ if (mysqli_query($conn, $db)) {
 }
 
 mysqli_select_db($conn, $dbname);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 $tb ="CREATE TABLE IF NOT EXISTS loginform (
         id INT  AUTO_INCREMENT,
@@ -77,27 +32,6 @@ if (mysqli_query($conn, $tb)) {
 } else {
     die("Error creating table: " . mysqli_error($conn));
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 $uname = "ceconline"; 
 $password = "cec@123";

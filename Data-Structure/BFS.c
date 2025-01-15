@@ -3,6 +3,7 @@
 
 void BFS(int graph[MAX][MAX], int start, int n);
 
+
 int main()
 {
     int graph[MAX][MAX];
@@ -34,7 +35,9 @@ void BFS(int graph[MAX][MAX], int start, int n)
     
     
     visited[start] = 1;
+
     queue[rear++] = start;
+    
     
     
     printf("BFS Traversal: ");

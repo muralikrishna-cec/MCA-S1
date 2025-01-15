@@ -14,9 +14,6 @@
     $dbpword=$row['password'];
   }
 
-
-
-
   if(isset($dbuname)&& isset($dbpword)){
 
     if($dbuname==$uname && $dbpword==$pword){
