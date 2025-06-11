@@ -5,7 +5,7 @@ This repository contains lab programs for **MCA Semester 1**, organized into thr
 ## 📁 Folder Structure
 
 - `Python` – Python Programming Lab
-- `Data-Structure` – Data Structures Lab (using Python or C)
+- `Data-Structure` – Data Structures Lab (using C)
 - `Web-Programming` – Web Programming Lab (HTML, CSS, JavaScript)
 
 ## 📘 Subjects & Topics Covered
@@ -24,11 +24,10 @@ This repository contains lab programs for **MCA Semester 1**, organized into thr
 - Recursion-based problems
 
 ### 🌐 Web Programming
-- HTML5 structure and semantic tags
-- CSS for layout and styling
-- JavaScript basics: DOM, events, functions
+- HTML5 
+- CSSng
+- JavaScript basics , events , functions
 - Forms and validation
-- Responsive web design fundamentals
 - PHP
 - MYSQL
 
@@ -37,4 +36,5 @@ This repository contains lab programs for **MCA Semester 1**, organized into thr
 - `Python`
 - `HTML5`, `CSS`, `JavaScript`
 - `C`
+- `JavaScript`
 
